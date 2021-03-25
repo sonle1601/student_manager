@@ -1,5 +1,6 @@
 # student_manager
 Có validate và localstorage.
+Trong database có sẵn 2 sinh viên.
 
 Các chức năng: 
 - Thêm sinh viên: khi không có sinh viên nào trong database trùng email
