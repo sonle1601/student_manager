@@ -67,6 +67,8 @@ function render() {
     })
     studentList.innerHTML = studentListHtml.join('')
 }
+// lấy các validation rule từ input
+// gán các hành động khi blur và nhập dữ liệu vào input
 function setValidation() {
     for (var input of inputs) {
         const rules = input.getAttribute('rules').split('|');
@@ -87,6 +89,7 @@ function setValidation() {
 
 }
 
+// Thực hiện validate cho input
 function handleValidate(event) {
     var rules = formRules[event.target.className];
     var errorMessage;
@@ -110,6 +113,7 @@ function handleValidate(event) {
     }
     return !errorMessage;
 }
+// Xoá message báo lỗi khi đang nhậP input
 function handleClearError(event) {
     var formGroup = getParentElement(event.target, '.form-group');
     if (formGroup.classList.contains('invalid')) {
@@ -124,6 +128,7 @@ function handleClearError(event) {
 
 }
 
+// Tạo sinh viên nếu đã validate và không có email sinh viên trong database
 function createStudent() {
     let isValid = true;
 
@@ -154,7 +159,6 @@ function createStudent() {
 
         handleEvents()
         render()
-
     }
 }
 
@@ -162,9 +166,9 @@ function deleteStudent(event) {
 
     const studentItem = getParentElement(event.target, '.cards_item')
     students.splice(studentItem.dataset.index, 1)
+
     // Clear Input, trong trường hợp click vào edit trước rồi click vào delete
     // nếu ấn Save thì thông tin của sinh viên đã bị xoá sẽ ghi đè lên sinh viên khác
-
     inputName.value = ''
     inputEmail.value = ''
     inputPhone.value = ''
