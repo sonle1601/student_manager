@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Manager Student</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-sm-12">
+        <ul class="cards" id="student-list">            
+            <!-- <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="https://vanhienblog.info/wp-content/uploads/2019/02/anh-gai-xinh-dep-hot-girl-1-00.jpg">
+                        <span class="badge badge-info" onclick="onEditStudent(0)">Edit</span>
+                        <span class="badge badge-danger" onclick="onDeleteStudent(0)">Delete</span>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_text">Name: Hoàn Nguyễn</h2>
+                        <p class="card_text">Email: hoantn.fsoft@gmail.com</p>
+                        <p class="card_text">Phone: 0984.894.098</p>
+                        <p class="card_text">Address: Hà Nội</p>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <form class="content student-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="email" class="form-control name" rules="required" placeholder="Enter your name" />
+            <label for="name" class="form-message"></label>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control email" rules="required|email" placeholder="Enter your email" />
+            <label for="email" class="form-message"></label>
+
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control phone" rules="required|phone" placeholder="Enter your phone" />
+            <label for="phone" class="form-message"></label>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control address" rules="required" placeholder="Enter your address" />
+            <label for="phone" class="form-message"></label>
+
+          </div>
+
+          <button type="button" class="btn btn-outline-primary btn-create" >
+            
+          </button>
+          <div class="message"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script> 
+</body>
+
+</html>
